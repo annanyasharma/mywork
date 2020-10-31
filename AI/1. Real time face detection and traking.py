@@ -5,8 +5,8 @@ import os
 alg = "haarcascade_frontalface_default.xml"
 haar = cv2.CascadeClassifier(alg)
 cam = cv2.VideoCapture(0)
-dataset = "dataset"
-name = "mummy"
+dataset = "dataset" #make a dir name dataset manually inside your working dir 
+name = " " #write a name you want to give your dataset inside databse dir
 
 path = os.path.join(dataset, name)
 if not os.path.isdir(path):
