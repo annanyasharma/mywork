@@ -1,23 +1,22 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import User, Images
+from .models import User, Images, Document
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from .form import RegisterForm
 from .form import ContactForm
-
-
-
+from django.core.files.storage import FileSystemStorage
 
 
 # Create your views here.
+
+
 def homepage(request):
     context = {
         'homepage_text': "If you are also thinking the same then Dlock is here to solve your this issue."
     }
     return render(request, 'homepage.html', context)
-
 
 
 def DLock(request):
@@ -64,4 +63,15 @@ def register(request):
         form = RegisterForm()
     return render(request, 'register.html', {'form': form})
 
+
+def Upload(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['document_save']
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        return render(request, 'registration/login.html', {
+            'uploaded_file_url': uploaded_file_url
+        })
+    return render(request, 'registration/login.html')
 

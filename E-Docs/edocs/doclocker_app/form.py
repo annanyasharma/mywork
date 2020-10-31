@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import Images
+from .models import Images, Document
 
 class RegisterForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
@@ -20,3 +20,9 @@ class ContactForm(forms.Form):
         required=True,
         widget=forms.TextInput()
     )
+
+
+class DocumentForm(forms.ModelForm):
+    class Meta:
+        model = Document
+        fields = ('description', 'document')

@@ -10,6 +10,37 @@
         <div class="content">
             <font face="Arial"><h2 style="padding:60px; color:#3498DB; "><b>Hiii   {{ user.username }}!  Welcome to Dlock you can store your document here!!!</b></h2>
         </div>
+
+        <div class="jumbotron">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="documents">
+                <button type="submit" class="btn btn-primary">Upload File</button>
+            </form>
+        </div>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Download</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in Document %}
+            <tr class="table-primary">
+                <td>{{forloop.counter}}}</td>
+                <td>{{i.description}}</td>
+                <td>{{i.uploaded_at}}</td>
+                <td><a href="{{i.documents.url}}" download>{{i.document}}</a></td>
+            </tr>
+            </tbody>
+        {% endfor %}
+        </table>
+
+
         <p><a href="{% url 'logout' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Logout</a></p>
         <pre style="padding:60px;">
         </pre>
