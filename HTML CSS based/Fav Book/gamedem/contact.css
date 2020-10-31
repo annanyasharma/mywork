@@ -1,0 +1,53 @@
+body{
+  background-image: url(contact.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+
+.sidenav{
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  background-color: #148DFE;
+  overflow-x: hidden;
+  padding-top: 30px;
+}
+
+.sidenav a{
+  padding: 16px 8px 8px 18px;
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+.sidenav a:hover{
+  color: #91FFFF;
+}
+
+h1{
+  font-size: 45px;
+  padding-top: 100px;
+  padding-left: 40%;
+  font-family: lato;
+  color: white;
+}
+
+h2{
+  padding: 60px;
+  padding-left: 35%;
+  font-size: 30px;
+  font-family: lato;
+  color: white;
+}
+
+.footer{
+  padding-left: 8px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%
+  color: white;
+  text-align: left;
+
+}

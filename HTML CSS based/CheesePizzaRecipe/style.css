@@ -1,0 +1,207 @@
+/* referenced website https://www.w3schools.com/Css/ */
+body{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #ff5050;
+}
+
+.navbar ul, .footer{
+  margin-bottom: 0;
+  background-color: #f4511e;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.navbar li{
+  float: left;
+  font-size: 20;
+}
+
+.navbar li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+.navbar li a:hover{
+  background-color: white;
+  color: #5BB2CE;
+}
+
+h1{
+  padding-bottom: 2px;
+  text-align: center;
+  text-shadow: 2px 1px;
+  color: red;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+main article{
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px;
+}
+
+main div{
+  display: flex;
+  margin: 20px;
+  flex-flow: row wrap;
+}
+
+main p{
+  font-size: 20px;
+  color: #ffff80;
+}
+
+main p span#srac{
+  font-style: italic;
+  text-decoration-color: green;
+}
+
+main p span#mpcp{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+h2{
+  padding-bottom: 2px;
+  color: red;
+  margin-left: 50px;
+}
+
+.card{
+  background-color: #f4511e;
+  border-radius: 5%;
+  padding-right: 50px;
+}
+
+#ingredients{
+  list-style-type: circle;
+  margin: 20px;
+}
+
+#directions{
+  margin: 20px;
+  list-style-type: upper-roman;
+  margin-left: inherit;
+}
+
+
+li{
+  font-size: 20px;
+  color: #ffff80;
+}
+
+h3{
+  padding-bottom: 3px;
+  color: yellow;
+}
+
+.Hhl{
+  background-color: yellow;
+}
+
+.img{
+  align: center;
+  margin: 20px;
+  text-align: center;
+}
+
+.emojis{
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+
+}
+
+
+
+#reference {
+    display: flex;
+    justify-content: space-between;
+}
+
+#reference > li {
+    display: flex;
+    padding: 10px 10px;
+    margin: auto 5px;
+    border: solid 1px #666;
+    background: yellow;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    transition-duration: 0.5s;
+    color: red;
+}
+
+#reference > li:hover {
+    border-color: #999;
+    background-color: white;
+    color: #333;
+}
+#reference > li:last-child {
+    margin-right: 20px;
+}
+#reference > li:first-child {
+    margin-left: 0;
+}
+
+#reference > li > a {
+    color: inherit;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 560px) {
+    .Hhl {
+        padding: 0 25px;
+        font-size: 32px;
+        margin-top: 20px;
+    }
+    .img {
+        flex-direction: column;
+    }
+    .img > img {
+        height: auto;
+        width: 100%;
+    }
+    #reference {
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+    #reference > li {
+        margin: 2px;
+        border-radius: 2px;
+    }
+
+    #reference > li:nth-child(odd) {
+        background: red;
+        color: yellow;
+        border-color: #999;
+    }
+
+    #reference > li:last-child {
+        margin-right: 0;
+    }
+
+
+@media screen and (max-width: 400px) {
+    .Hhl {
+        padding: 10px;
+        font-size: 22px;
+        margin-top: 10px;
+    }
+    #reference {
+        font-size: 13px;
+    }
